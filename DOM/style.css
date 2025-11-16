@@ -1,0 +1,16 @@
+h1{
+    background-color: aqua;
+    padding: 20px;
+    width: 100px;
+
+}
+.content{
+     background-color: rgb(224, 25, 214,20%);
+    padding: 20px;
+    width: 120px;
+
+}
+
+.newclass{
+    background-color: aquamarine;
+}
