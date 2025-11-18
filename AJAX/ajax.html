@@ -9,19 +9,22 @@
     <p id ="demo">Here we load data</p>
     <button onclick="loadData()">Click</button>
 
+
     <script>
         function loadData(){
-            var xhttp = new XMLHttpRequest();
+            var xhr = new XMLHttpRequest();
 
-            xhttp.onreadystatechange = function(){
-                if (this.readyState == 4 && this.status == 200){
-                    document.getElementById("demo").innerHTML = this.responseText;
-                    console.log(this.responseText);
-                }
+            //response arrive
+            
+            xhr.onload = function(){
+                const container = document.getElementById('demo');
+                demo.innerHTML = xhr.responseText;
+
             };
-
-             xhttp.open("GET", "basicjs/readme.txt", true);
-            xhttp.send();
+            //prepare request- get==server theke data niye asbo ,post=server a data joma dibo(update),put,patch
+           
+            xhr.open("GET", "readme.txt", true);
+            xhr.send();
         }
     </script>
 </body>
